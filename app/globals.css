@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+*{
+  font-family: IranSans;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-Black.ttf');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-Bold.ttf');
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-ExtraBold.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-DemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-Light.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-UltraLight.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansXFaNum-Thin.ttf');
+  font-weight: 100;
+}
+
+.opacityanimstart{
+  animation: opacityanim 2s 1;
+}
+
+@keyframes opacityanim {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
