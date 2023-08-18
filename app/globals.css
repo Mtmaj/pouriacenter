@@ -65,7 +65,14 @@ html,body{
 }
 
 .opacityanimstart{
-  animation: opacityanim 2s 1;
+  opacity: 1;
+  animation: opacityanim 1s 1;
+}
+
+.widthanimstart{
+  width: 100%;
+  opacity: 1;
+  animation: widthanim 1s 1;
 }
 
 @keyframes opacityanim {
@@ -73,6 +80,16 @@ html,body{
     opacity: 0;
   }
   100%{
+    opacity: 1;
+  }
+}
+@keyframes widthanim {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100%{
+    width: 100%;
     opacity: 1;
   }
 }
