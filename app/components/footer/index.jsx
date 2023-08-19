@@ -14,7 +14,7 @@ const Footer = ()=>{
         <div className="w-full flex flex-col px-[100px] gap-y-[10px] h-fit">
             <div className="w-full bg-black h-[1px] rounded"></div>
             <div className="w-full flex flex-row px-[10px] py-[10px] h-fit ">
-                <div className="w-[90%] flex flex-col items-start mx-aut gap-y-[20px]">
+                <div className="w-[90%] border-l-[1px]  flex flex-col items-start mx-aut gap-y-[20px]">
                     <span className="font-bold">صفحات اصلی</span>
                     <div className="pr-[10px] flex flex-col gap-y-[10px]">
                         <LinkItme text={"واحد های تجاری"} />
@@ -24,7 +24,6 @@ const Footer = ()=>{
                         <LinkItme text={"خدمات"} />
                     </div>
                 </div>
-                <div className="w-[1px] h-[100svh] bg-black"></div>
                 <div className="w-[90%] flex flex-col mx-auto"></div>
                 <div className="w-[90%] flex flex-col mx-auto"></div>
             </div>

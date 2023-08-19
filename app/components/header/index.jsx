@@ -74,7 +74,7 @@ const Header = ()=>{
                         <HeaderItem text={"واحد فروش و اجاره"} />
                     </div>
                     <div className="flex flex-col items-center scale-[0.8]">
-                        <Image src={LogoImg} alt={"Logo"} className={" md:mr-[0] mr-[-20px] object-contain "+(show_line == "opacity-[0]"?"md:min-w-[120px] min-w-[80px]":"md:min-w-[90px] min-w-[80px]")} />
+                        <Image src={LogoImg} alt={"Logo"} className={" md:mr-[0] mr-[-20px] object-contain "+(show_line == "opacity-[0]"?"md:min-w-[100px] min-w-[80px]":"md:min-w-[90px] min-w-[80px]")} />
                         <div className={"md:flex flex-col text-[13px] items-center mt-[-15px] hidden font-extrabold "+(show_line == "opacity-[0]"?"md:flex":"md:hidden")}>
                             <span className="text-orange">POURIA</span>
                             <span className="mt-[-4px]">CENTER</span>
