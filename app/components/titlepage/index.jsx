@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const PageTitle = (props)=>{
     return (
-        <div className="w-full items-center px-[100px] justify-start flex flex-row gap-x-[20px] text-[15px] font-bold">
+        <div className="w-full items-center md:px-[100px] px-[20px] justify-start flex flex-row md:gap-x-[20px] gap-x-[10px] md:text-[15px] text-[13px] font-bold">
             <Link href={"/"}>صفحه اصلی</Link>
             {props.items.map((item,index)=>{
                 return <>

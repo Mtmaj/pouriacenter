@@ -12,16 +12,34 @@ import {useSwiper} from "swiper/react";
 import {useRef,useState,useEffect} from "react"
 import { Autoplay, FreeMode, Mousewheel, Scrollbar,EffectCards } from 'swiper/modules';
 import {IoIosArrowBack,IoIosArrowForward} from "react-icons/io"
+import Image from "next/image";
+import LogoImg from "@/public/images/logo.png";
 
 
 
-const SellItem = ()=>{
+export const SellItem = ()=>{
     return (
-        <div className="w-full flex flex-col rounded-[10px] border-green lg:border-[1px] bg-white">
-            <img src="https://s8.uupload.ir/files/group_104_er51.png" />
-            <div className="w-full h-full px-[10px] py-[10px] flex flex-col gap-y-[15px] items-center">
-                <span className="w-full text-start font-bold">لورم ایپسوم</span>
-                <span className="w-full text-start opacity-[0.5] flex items-center gap-x-[5px] text-[14px]"><CiLocationOn className="mb-[4px]" size={17}/>آدرس : طبقه اول ، پلاک 12</span>
+        <div className="w-full flex flex-col rounded-[10px] border-green border-[1px] bg-white ">
+            <div className="relative flex items-start justify-end w-full">
+                <div className="absolute">
+                    <Image src={LogoImg} alt="پوریا سنتر" />
+                </div>
+                <img src="https://s8.uupload.ir/files/group_104_er51.png" className="rounded-[10px] w-full shadow object-cover" />
+            </div>
+            
+            <div className="w-full h-full px-[13px] py-[10px] flex flex-col gap-y-[14px] items-center">
+                <div className="flex w-full justify-start">
+                    <div className="flex flex-col items-start gap-y-[4px] mb-[3px]">
+                        <span className="w-full text-start font-bold">لورم ایپسوم</span>
+                        <div className="w-[90%] gap-x-[3px] flex flex-row"> 
+                            <div className="w-[3px] rounded-full h-[3px] bg-orange"></div>
+                            <div className="w-[90%] bg-black rounded h-[3px] bg-orange"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <span className="w-full text-start opacity-[1] font-semibold flex items-center gap-x-[5px] text-[14px]"><CiLocationOn className="mb-[4px]" size={17}/>آدرس : طبقه اول ، پلاک 12</span>
                 <div className="w-full flex flex-row justify-between items-center">
                     <span className="font-semibold text-[16px]">رهن</span>
                     <span className="text-[#FF4545] font-semibold text-[16px]">50000000</span>
@@ -30,24 +48,11 @@ const SellItem = ()=>{
                     <span className="font-semibold text-[16px]">اجاره</span>
                     <span className="text-[#FF4545] font-semibold text-[16px]">50000000</span>
                 </div>
-                <Swiper
-                className="w-full"
-                    slidesPerView={"auto"}
-                    freeMode={true}
-                    spaceBetween={0}
-                    modules={[FreeMode]}
-                >
-                    <SwiperSlide className="flex items-center justify-center">
-                        <Link href={""} className="whitespace-nowrap text-[13px] bg-[#D9D9D9] font-bold px-[12px] py-[6px] rounded-full">#اجاره ای</Link>
-                    </SwiperSlide>
-                    <SwiperSlide className="flex items-center justify-center">
-                        <Link href={""} className="whitespace-nowrap text-[13px] bg-[#D9D9D9] font-bold px-[12px] py-[6px] rounded-full">#اجاره ای</Link>
-                    </SwiperSlide>
-                    <SwiperSlide className="flex items-center justify-center">
-                        <Link href={""} className="whitespace-nowrap text-[13px] bg-[#D9D9D9] font-bold px-[12px] py-[6px] rounded-full">#اجاره ای</Link>
-                    </SwiperSlide>
-                </Swiper>
-                <Link className="bg-orange text-[13px] mt-[10px] hover:mt-[5px] hover:mb-[5px] transition-all w-fit text-white font-bold px-[12px] py-[6px] rounded" href={"/"}>اطلاعات بیشتر</Link>
+                <div className="w-full flex flex-row">
+                    <Link href={""} className="whitespace-nowrap text-[12px] bg-[#D9D9D9] font-bold px-[12px] py-[4px] rounded-full">#اجاره ای</Link>
+                </div>
+                
+                <Link className="border-yellow border text-black text-[13px] mt-[5px] hover:mt-[2.5px] hover:mb-[2.5px] transition-all w-fit font-bold px-[12px] py-[6px] rounded shadow-xl drop-shadow" href={"/"}>اطلاعات بیشتر</Link>
             </div>
             
         </div>

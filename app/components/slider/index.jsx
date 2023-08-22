@@ -32,7 +32,7 @@ const Slider = ()=>{
     }
     return (
         <div className="w-full slider flex opacity-[0] flex-col items-center gap-y-[20px]">
-            <div className="w-full flex flex-row items-center gap-x-[10px] md:px-[100px] px-[20px]">
+            <div className="w-full flex flex-row items-center gap-x-[10px]">
                 <div onClick={()=>{swiperRef.current.slideNext()}} className="mr-[5px] md:block hidden hover:mr-[0] hover:ml-[5px] transition-all"><IoIosArrowForward size={30}/></div>
                 <Swiper  modules={[Autoplay]} className="w-full md:max-h-[400px] rounded md:min-h-[400px] h-[200px]" loop={true} autoplay={{ delay: 4000, disableOnInteraction: false }} dir="ltr" onSlideChange={(index)=>{SetPageIndex(index.realIndex)}} slidesPerView={1} onSwiper={(swiper)=>{swiperRef.current = swiper}}>
                     <SwiperSlide className="text-center flex itmes-center justify-center w-full h-full">
@@ -49,7 +49,6 @@ const Slider = ()=>{
                 <div className={"h-[7px] w-[7px] rounded-full transition-all duration-500 " + (PageIndex == 1?"bg-orange":"bg-black opacity-[0.1]")}></div>
             </div>
         </div>
-        
     )
 }
 
