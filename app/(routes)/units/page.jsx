@@ -1,4 +1,4 @@
-import Units from '@/app/components/units';
+import Units from '@/app/components/units/main';
 import Header from "@/app/components/header/index"
 
 function page() {
