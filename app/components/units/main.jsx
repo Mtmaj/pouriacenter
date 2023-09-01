@@ -3,7 +3,7 @@ import  Navbar  from "./navbar.jsx"
 export default ()=>{
     return(
         <>
-            <section className="flex flex-col lg:flex-row px-6">
+            <section className="flex flex-col md:flex-row px-6 gap-10">
                 <Navbar/>
                 <Content/>
 
