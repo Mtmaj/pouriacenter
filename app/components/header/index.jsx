@@ -83,7 +83,7 @@ const Header = ()=>{
                     <div className="w-full flex justify-between hidden lg:flex">
                         <HeaderItem text={"اخبار"} link={"/news"} />
                         <HeaderItem text={"خدمات"} link={"/services"} />
-                        <HeaderItem text={"تماس با ما"} link={"/"} />
+                        <HeaderItem text={"تماس با ما"} link={"/contactus"} />
                         <HeaderItem text={"درباره ما"} link={"/aboutus"} />
                     </div>
                     <div className="lg:hidden">
@@ -101,19 +101,19 @@ const Header = ()=>{
                 <div className="flex flex-col items-start gap-y-[10px] px-[20px] pb-[15px] max-h-[300px] overflow-y-scroll pt-[15px]">
                         <HeaderItem text={"صفحه اصلی"} link={"/"} />    
                         <Line />
-                        <HeaderItem text={"واحد های تجاری"} link={"/"} />
+                        <HeaderItem text={"واحد های تجاری"} link={"/shops"} />
                         <Line />
-                        <HeaderItem text={"برند ها"} link={"/"} />
+                        <HeaderItem text={"برند ها"} link={"/shops"} />
                         <Line />
                         <HeaderItem text={"واحد فروش و اجاره"} link={"/sellandrent"} />
                         <Line />
                         <HeaderItem text={"اخبار"} link={"/news"} />
                         <Line />
-                        <HeaderItem text={"خدمات"} link={"/"} />
+                        <HeaderItem text={"خدمات"} link={"/services"} />
                         <Line />
-                        <HeaderItem text={"تماس با ما"} link={"/"} />
+                        <HeaderItem text={"تماس با ما"} link={"/contactus"} />
                         <Line />
-                        <HeaderItem text={"درباره ما"} link={"/"} />
+                        <HeaderItem text={"درباره ما"} link={"/aboutus"} />
                 </div>
             </div>
             

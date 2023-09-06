@@ -3,8 +3,6 @@
 import Link from "next/link"
 import {CiLocationOn} from "react-icons/ci"
 import 'swiper/css/free-mode';
-
-
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css";
 import 'swiper/css/effect-cards';
@@ -17,20 +15,20 @@ import LogoImg from "@/public/images/logo.png";
 
 
 
-export const SellItem = ()=>{
+export const SellItem = (props)=>{
     return (
         <div className="w-full flex flex-col rounded-[10px] border-green border-[1px] bg-white ">
-            <div className="relative flex items-start justify-end w-full">
+            <div className="relative flex items-start justify-end h-[300px] w-full">
                 <div className="absolute">
                     <Image src={LogoImg} alt="پوریا سنتر" />
                 </div>
-                <img src="https://s8.uupload.ir/files/group_104_er51.png" className="rounded-[10px] w-full shadow object-cover" />
+                <img src={"http://"+props.item.images[0]} className="rounded-[10px] h-[300px] w-full shadow object-cover" />
             </div>
             
             <div className="w-full h-full px-[13px] py-[10px] flex flex-col gap-y-[14px] items-center">
                 <div className="flex w-full justify-start">
                     <div className="flex flex-col items-start gap-y-[4px] mb-[3px]">
-                        <span className="w-full text-start font-bold">لورم ایپسوم</span>
+                        <span className="w-full text-start font-bold">{props.item.name}</span>
                         <div className="w-[90%] gap-x-[3px] flex flex-row"> 
                             <div className="w-[3px] rounded-full h-[3px] bg-orange"></div>
                             <div className="w-[90%] bg-black rounded h-[3px] bg-orange"></div>
@@ -39,20 +37,31 @@ export const SellItem = ()=>{
                     </div>
                 </div>
                 
-                <span className="w-full text-start opacity-[1] font-semibold flex items-center gap-x-[5px] text-[14px]"><CiLocationOn className="mb-[4px]" size={17}/>آدرس : طبقه اول ، پلاک 12</span>
-                <div className="w-full flex flex-row justify-between items-center">
+                <span className="w-full text-start opacity-[1] font-semibold flex items-center gap-x-[5px] text-[14px]"><CiLocationOn className="mb-[4px]" size={17}/>آدرس : {props.item.address}</span>
+                {props.item.price == null? 
+                (<><div className="w-full flex flex-row justify-between items-center">
                     <span className="font-semibold text-[16px]">رهن</span>
-                    <span className="text-[#FF4545] font-semibold text-[16px]">50000000</span>
+                    <span className="text-[#FF4545] font-semibold text-[16px]">{props.item.mortgage_price} تومن</span>
                 </div>
                 <div className="w-full flex flex-row justify-between items-center">
                     <span className="font-semibold text-[16px]">اجاره</span>
-                    <span className="text-[#FF4545] font-semibold text-[16px]">50000000</span>
+                    <span className="text-[#FF4545] font-semibold text-[16px]">{props.item.rent_price} تومن</span>
+                </div></>):<div className="w-full flex flex-row justify-between items-center">
+                    <span className="font-semibold text-[16px]">قیمت</span>
+                    <span className="text-[#FF4545] font-semibold text-[16px]">{props.item.price} تومن</span>
+                </div>}
+                <div className="w-full flex flex-row justify-between items-center">
+                    <span className="font-semibold text-[16px]">متراژ</span>
+                    <span className="text-[#FF4545] font-semibold text-[16px]">{props.item.meterage} متر</span>
                 </div>
                 <div className="w-full flex flex-row">
-                    <Link href={""} className="whitespace-nowrap text-[12px] bg-[#D9D9D9] font-bold px-[12px] py-[4px] rounded-full">#اجاره ای</Link>
+                    {props.item.tags.map((item)=>{
+                        <div className="whitespace-nowrap cursor-pointer text-[12px] bg-[#D9D9D9] font-bold px-[12px] py-[4px] rounded-full">#{item}</div>
+                    })}
+                    
                 </div>
                 
-                <Link className="border-yellow border text-black text-[13px] mt-[5px] hover:mt-[2.5px] hover:mb-[2.5px] transition-all w-fit font-bold px-[12px] py-[6px] rounded shadow-xl drop-shadow" href={"/"}>اطلاعات بیشتر</Link>
+                <Link className="border-yellow border text-black text-[13px] mt-[5px] hover:mt-[2.5px] hover:mb-[2.5px] transition-all w-fit font-bold px-[12px] py-[6px] rounded shadow-xl drop-shadow" href={{pathname:"/sellandrent/sell",query:{"id":props.item._id,"is_sell":!(props.item.price == null)}}}>اطلاعات بیشتر</Link>
             </div>
             
         </div>
@@ -86,12 +95,12 @@ const Sell = ()=>{
     }
     return (
         <div className="w-full mx-auto w-full md:px-[80px] opacity-[0] selllist px-[0px] flex gap-y-[40px] pb-[40px] lg:flex-row flex-col items-center gap-x-[20px] mb-[30px]">
-            <div className="lg:grid grid-cols-3 gap-x-[20px] hidden">
+            {/* <div className="lg:grid grid-cols-3 gap-x-[20px] hidden">
                 <SellItem />
                 <SellItem />
                 <SellItem />
-            </div>
-            <div className="w-full lg:hidden overflow-hidden pb-[30px]">
+            </div> */}
+            {/* <div className="w-full lg:hidden overflow-hidden pb-[30px]">
                 <Swiper
                     className="w-[70%] md:w-[50%] lg:hidden"
                     effect={"cards"}
@@ -108,7 +117,7 @@ const Sell = ()=>{
                         <SellItem />
                     </SwiperSlide>
                 </Swiper>
-            </div>
+            </div> */}
             <Link href={"/"} className="bg-white drop-shadow-[0px_3px_10px_rgba(0,0,0,0.14)] px-[10px] whitespace-nowrap py-[5px] rounded-[5px] hover:mb-[10px] transition-all">مشاهده همه</Link>
             
         </div>

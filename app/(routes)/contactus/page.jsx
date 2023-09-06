@@ -1,17 +1,17 @@
 import Header from "@/app/components/header/index"
 import PageTitle from "@/app/components/titlepage/index"
-import MainServices from "@/app/components/services/index"
+import MainContactUs from "@/app/components/contactus/index"
 import Footer from "@/app/components/footer"
-const Services = ()=>{
+const ContactUS = ()=>{
     return (
         <>
-            <Header />
+            <Header/>
             <div className="md:h-[140px] lg:h-[130px] h-[100px] w-full"></div>
-            <PageTitle items={["خدمات"]} />
-            <MainServices />
+            <PageTitle items={["تماس با ما"]} />
+            <MainContactUs />
             <Footer />
         </>
     )
 }
 
-export default Services
+export default ContactUS
