@@ -69,7 +69,7 @@ const Header = ()=>{
                 <div className="w-full items-center gap-x-[40px] justify-between  flex flex-row">
                     <div className="w-full hidden lg:flex justify-between font-regular">
                         <HeaderItem text={"صفحه اصلی"} link={"/"} />
-                        <HeaderItem text={"واحد های تجاری"} link={"/"} />
+                        <HeaderItem text={"واحد های تجاری"} link={"/units"} />
                         <HeaderItem text={"برند ها"} link={"/"} />
                         <HeaderItem text={"واحد فروش و اجاره"}  link={"/sellandrent"}/>
                     </div>
