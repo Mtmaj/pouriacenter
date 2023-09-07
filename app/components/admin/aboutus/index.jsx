@@ -26,6 +26,7 @@ const AboutUsAdmin = ()=>{
     }
     function handleChange(event){
         upload_image(event.target.files[0]).then((data)=>{
+            console.log(data)
             var change_list = [...image_list]
             change_list.push(data.img_url)
             set_image_list([...change_list])
@@ -58,7 +59,7 @@ const AboutUsAdmin = ()=>{
             <div className="w-full flex flex-row overflow-x-scroll min-h-[100px] h-[100px]">
                 {image_list.map((item)=>{
                     
-                     return (<img className="min-w-[100px] w-[100px] h-[100px] min-h-[100px] object-cover" src={"http://"+item} onClick={()=>{
+                     return (<img className="min-w-[100px] w-[100px] h-[100px] min-h-[100px] object-cover" src={"https://"+item} onClick={()=>{
                        var list_change = [...image_list]
                        list_change.splice(list_change.indexOf(item),1)
                        set_image_list([...list_change])

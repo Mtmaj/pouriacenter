@@ -69,8 +69,8 @@ const Header = ()=>{
                 <div className="w-full items-center gap-x-[40px] justify-between  flex flex-row">
                     <div className="w-full hidden lg:flex justify-between font-regular">
                         <HeaderItem text={"صفحه اصلی"} link={"/"} />
-                        <HeaderItem text={"واحد های تجاری"} link={"/units"} />
-                        <HeaderItem text={"برند ها"} link={"/"} />
+                        <HeaderItem text={"واحد های تجاری"} link={"/shops"} />
+                        <HeaderItem text={"برند ها"} link={"/shops?is_brand=true"} />
                         <HeaderItem text={"واحد فروش و اجاره"}  link={"/sellandrent"}/>
                     </div>
                     <div className="flex flex-col items-center scale-[0.8]">
@@ -103,7 +103,7 @@ const Header = ()=>{
                         <Line />
                         <HeaderItem text={"واحد های تجاری"} link={"/shops"} />
                         <Line />
-                        <HeaderItem text={"برند ها"} link={"/shops"} />
+                        <HeaderItem text={"برند ها"} link={"/shops?is_brand=true"} />
                         <Line />
                         <HeaderItem text={"واحد فروش و اجاره"} link={"/sellandrent"} />
                         <Line />

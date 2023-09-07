@@ -17,7 +17,7 @@ const MainAboutUs = ()=>{
         <div className="container mt-[20px] mx-auto flex flex-col lg:px-[100px] md:px-[40px] gap-y-[20px] px-[10px]">
             <div className="grid md:grid-cols-2 gap-y-[10px] w-full gap-x-[30px] px-[50px] ">
                 <div className="w-full flex itmes-end">
-                    <img src={"http://"+data.images_slider[0]} />
+                    <img src={"https://"+data.images_slider[0]} />
                 </div>
                 <div className="w-full flex items-center justify-start h-full ">
                     <div className="lg:w-[70%] md:w-[90%] w-full flex flex-col items-start md:gap-y-[10px] gap-y-[5px]">
@@ -31,7 +31,7 @@ const MainAboutUs = ()=>{
             </div>
             <div className="grid md:grid-cols-2 gap-y-[10px] w-full gap-x-[30px] px-[50px] ">
                 <div className="w-full flex itmes-start md:order-last order-1">
-                    <img src={"http://"+data.images_slider[1]} />
+                    <img src={"https://"+data.images_slider[1]} />
                 </div>
                 <div className="w-full flex items-center justify-end h-full md:order-1 order-last">
                     <div className="lg:w-[70%] md:w-[90%] w-full flex flex-col items-start md:gap-y-[10px] gap-y-[5px]">

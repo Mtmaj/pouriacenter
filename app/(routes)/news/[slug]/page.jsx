@@ -5,15 +5,17 @@ import NewsIcon from "@/public/icons/Newspaper.svg"
 import Image from "next/image"
 import MainNewsPage from "@/app/components/newspage/index"
 import { get_by_code } from "@/app/utils/network/news"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const News = ()=>{
     const [data,set_data] = useState(null)
+    useEffect(()=>{
     if(data == null){
+        console.log(location.href.split("/")[location.href.split("/").length - 1])
         get_by_code(location.href.split("/")[location.href.split("/").length - 1]).then((data_get)=>{
             set_data(data_get)
         })
-    }
+    }})
     return (
         <>
         {data == null?<></>:

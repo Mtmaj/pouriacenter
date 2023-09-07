@@ -13,8 +13,7 @@ let filters_info = [
 ];
 let categories_info = [
     {title:"بخش های اصلی" , subsets:["کافی شاپ","واحد های تجاری","برند","بورس طلا"]},
-    {title:"بخش های اصلی" , subsets:["کافی شاپ","واحد های تجاری","برند","بورس طلا"]},
-    {title:"بخش های اصلی" , subsets:["کافی شاپ","واحد های تجاری","برند","بورس طلا"]},
+    {title:"طبقات" , subsets:["همه","طبقه همکف","طبقه اول","طبقه دوم","طبقه سرم","بام"]},
 ];
 let tags_info = [
     {title:"پوشاک" , subsets:["#تی شرت","#تی شرت","#لباس مردانه","#لباس مجلسی"]},
@@ -30,12 +29,22 @@ const SingleTag = (props)=>{
     )
 }
 
-const Search = ()=>{
+const Search = (props)=>{
+    const [search_input,set_search_input] = useState("")
+    function handleSearch(){
+        if(search_input == ""){
+            props.set_search(null);
+            props.set_data(null)
+        }else{
+            props.set_search(search_input)
+            props.set_data(null)
+        }
+    }
     return(
         <>
-            <div className='w-full flex justify-center gap-3 m-auto '>
-                    <input className="px-3 py-2 w-[80%] outline-none bg-[#F1F1F1] rounded-md" type="text" placeholder="جست و جو کنید..." />
-                    <button className='bg-[#FF4545] p-[5px] rounded-md'><Image className=' min-w-[25px]' src={SearchIcon}/></button>
+            <div className='w-full flex justify-center gap-1 m-auto '>
+                    <input value={search_input} onChange={(e)=>{set_search_input(e.currentTarget.value)}} className="px-3 py-[8px] w-[100%] outline-none bg-[#F1F1F1] rounded-[10px] text-[14px] h-fit" type="text" placeholder="جست و جو کنید..." />
+                    <button onClick={handleSearch} className='bg-orange h-auto w-[47px] flex items-center justify-center rounded-md'><Image className=' min-w-[20px]' src={SearchIcon}/></button>
                 </div>
 
         </>
@@ -78,7 +87,7 @@ const Categories =({object,status})=>{
             {
                 status == "tags"? <ul className={`flex flex-wrap gap-2 ${display}`}>
                 {object.subsets.map((item,inxed)=>{
-                    return <small className='bg-white hover:bg-[#FF4545] hover:text-white cursor-pointer px-3 py-[2px] mt-2 flex items-center text-center rounded-2xl shadow-3xl'>{item}</small>
+                    return <small className='bg-white hover:bg-orange hover:text-white cursor-pointer px-3 py-[2px] mt-2 flex items-center text-center rounded-2xl shadow-3xl'>{item}</small>
 
                 })}</ul> 
                 : <ul className={`pr-7 ${display}`}>
@@ -113,15 +122,15 @@ const Tags = ()=>{
     )
 }
 
-function page(params) {
+function page(props) {
     return(
         <>
-            <section className="lg:w-[25vw] w-full ">
+            <section className="md:w-[300px] w-full">
 
-                <nav className="flex flex-col gap-4 rounded-md shadow-3xl py-3 px-7 ">
-                    <Search/>
-                    <Filters/>
-                    <button className='w-full py-2 bg-[#FF4545] font-bold text-white rounded-md'>حذف فیلتر ها</button>
+                <nav className="flex flex-col gap-4 rounded-md border-[#989797] border py-5 px-[15px] ">
+                    <Search set_search={props.set_search} set_data={props.set_data}/>
+                    <Filters filters={props} />
+                    <button className='w-full py-1 bg-orange text-[14px] text-white rounded-md'>حذف فیلتر ها</button>
                     
                     {categories_info.map((item)=>{
                         return <Categories object={item}/>

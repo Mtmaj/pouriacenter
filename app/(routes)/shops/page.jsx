@@ -6,7 +6,7 @@ function page() {
         <>
                     
         <Header/>
-        <div className="h-[130px] w-full"></div>
+        <div className="md:h-[130px] h-[100px] w-full"></div>
         <Units/>
         </>
     )

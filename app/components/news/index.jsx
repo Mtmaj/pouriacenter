@@ -5,7 +5,7 @@ import Link from "next/link"
 const NewsItem = (props)=>{
     return (
         <Link href={"/news/"+props.item.code} className="w-full flex sm:flex-row gap-y-[15px] flex-col justify-start h-fit gap-x-[10px]" >
-            <img className="h-[200px] border p-[5px] sm:w-[300px] w-full border-[rgba(0,0,0,0.2)] object-cover" src={"http://"+props.item.images[0]}/>
+            <img className="h-[200px] border p-[5px] sm:w-[300px] w-full border-[rgba(0,0,0,0.2)] object-cover" src={"https://"+props.item.images[0]}/>
             <div className="flex flex-col sm:gap-y-[40px] gap-[10px] sm:p-0 px-[10px] ">
                 <div className="flex flex-row gap-x-[30px] sm:justify-start  justify-between">
                     <span>کد : <span className="text-orange">{props.item.code}</span></span>

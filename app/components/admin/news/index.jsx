@@ -6,7 +6,7 @@ const NewsItem = (props)=>{
     return (
         <div className="cursor-pointer items-center w-full border-[1px] rounded flex justify-between flex-row p-[20px]">
             <div className="flex items-center flex-row gap-x-[15px]">
-                <img className="h-[100px] w-[100px] min-w-[100px] min-h-[100px] object-cover" src={"http://"+props.item.images[0]} />
+                <img className="h-[100px] w-[100px] min-w-[100px] min-h-[100px] object-cover" src={"https://"+props.item.images[0]} />
                 <span className="text-[17px]">{props.item.title}</span>
                 <span className="text-[17px]">{props.item.is_general?"اخبار عمومی":"اخبار داخلی"}</span>
                 <span className="text-[17px]">کد : {props.item.code}</span>

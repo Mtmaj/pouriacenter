@@ -9,12 +9,12 @@ const MainSellAndRentPage = (props)=>{
     return (
         <div className="w-full gap-x-[20px] md:px-[100px] px-[20px] gap-y-[20px] flex lg:flex-row flex-col mx-auto lg:items-start items-center pb-[40px]">
             <div className="min-w-[350px] md:w-[350px] w-full flex flex-col">
-                <img src={"http://"+props.data.images[slide_select]} className="border p-1 rounded border-yellow h-[400px] object-cover" />
+                <img src={"https://"+props.data.images[slide_select]} className="border p-1 rounded border-yellow h-[400px] object-cover" />
                 <div className="h-[10px]"></div>
                 <div className="w-full slider cursor-pointer h-[60px] overflow-x-scroll  flex mt-[5px] gap-x-[10px] no-scrollbar">
                     {props.data.images.map((item,index)=>{
                      return <div className="min-w-[60px] w-[60px] h-[60px]">
-                        <img onClick={()=>{set_slide_select(index)}} src={"http://"+item} className={(index==slide_select?"border ":"") + "p-1 rounded border-yellow h-[60px] object-cover"} />
+                        <img onClick={()=>{set_slide_select(index)}} src={"https://"+item} className={(index==slide_select?"border ":"") + "p-1 rounded border-yellow h-[60px] object-cover"} />
                     </div>})}
                 </div>
                 <div className="h-[20px]"></div>

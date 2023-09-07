@@ -13,10 +13,10 @@ const Search = (props)=>{
     const [search,set_search] = useState("")
     return (
         
-        <div className="md:w-[90%] w-full shadow-[0px_2px_10px_0px_rgba(0,0,0,0.10)] flex flex-row bg-[#FAFAFA] rounded-[10px] md:pr-[20px] pr-[10px] transition-all duration-500 focus-within:border-orange border border-[rgba(0,0,0,0)]">
+        <div className="md:w-[90%] w-full flex flex-row border-[#989797] border-[1px] rounded-[10px] md:pr-[20px] pl-[4px] py-[4px] pr-[10px] transition-all duration-500 focus-within:border-orange">
             <input value={search} onChange={(e)=>{set_search(e.currentTarget.value)}} type="text" className="text-[15px] !outline-none bg-[rgba(0,0,0,0)] w-full group" placeholder="جست و جو در آگهی های رهن و اجاره ..."/>
-            <div onClick={()=>{props.set_search(search);props.set_data(null)}} className="h-[40px] w-[45px] cursor-pointer bg-orange flex items-center justify-center rounded-[10px] ">
-                <Image src={SearchIcon} alt="جست و جو"  />
+            <div onClick={()=>{props.set_search(search);props.set_data(null)}} className="h-[35px] w-[38px] cursor-pointer bg-orange flex items-center justify-center rounded-[10px] ">
+                <Image className="w-[20px] h-[20px]" src={SearchIcon} alt="جست و جو"  />
             </div>
         </div>
         

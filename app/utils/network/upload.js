@@ -7,6 +7,7 @@ export async function upload_image(image_path){
     console.log("ok")
     formdata.append("image",image_path)
     const data = await axios.post(config.url+"upload/image",formdata,{headers:{...config.headers},maxBodyLength:Infinity})
+    console.log("ooook")
     console.log(data)
     return data.data
 }

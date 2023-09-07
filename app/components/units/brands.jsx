@@ -39,11 +39,9 @@ let object = [
 
 
 
-function Brands({maxEleman,slider}) {
-    
+function Brands({set_open_shop,data,startElement,maxEleman,slider}) {
     const swiperRef = useRef()
     const [PageIndex,setPageIndex] = useState(0);
-    console.log(PageIndex);
     function Pagination({slideLength}) {
     
         let index = 0
@@ -66,70 +64,18 @@ function Brands({maxEleman,slider}) {
     }
     
 
-    if (slider) {
-        const newObj = object.slice(12)
-        const slideLength = Math.floor(newObj.length/8+1)
-        let i= -1;
-
-        return(
-            <div className="w-full m-auto">
-            <Swiper className="w-full m-auto"
-                modules={[Pagination]}
-                onSlideChange={(index)=>{setPageIndex(index.realIndex)}}
-                onSwiper={(swiper)=>{swiperRef.current = swiper}}
-            
-            >
-
-                    {
-                    Array(slideLength).fill({}).map(
-                    ()=>{
-                        i++
     
-                        return(
-                <SwiperSlide>
-
-                            <section className="w-full grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] auto-rows-[150px]  sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:auto-rows-[200px]">
-                            {
-                                newObj.slice(i*maxEleman).map(
-                                    (item,index)=>{
-                                        if (index<=maxEleman-1) {
-                                            return <div className=" border-solid border-[1px] border-[#bfbfbf] flex justify-center items-center">{item.img?<Image className="h-full w-full" src={item.img}/>:<p>{item.text}</p>}</div>
-                                        }
-                                        
-                                    }
-                                )
-    
-                            }
-                            </section>
-                </SwiperSlide>
-
-                        )
-    
-                    }
-                )
-                    }
-            </Swiper>
-
-            <Pagination slideLength={slideLength}/>
-            </div>
-        )
-    }
-    else{
-        return(
-            <section className="w-full grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] auto-rows-[150px]  sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:auto-rows-[200px]">
+    return(
+            <section className="w-full grid grid-cols-2 auto-rows-[150px]  sm:grid-cols-4 sm:auto-rows-[200px]">
             {
-                object.map(
+                data.slice(startElement,startElement+maxEleman).map(
                     (item,index)=>{
-                        if (index<=maxEleman-1) {
-                            return <div className=" border-solid border-[1px] border-[#bfbfbf] flex justify-center items-center">{item.img?<Image className="h-full w-full" src={item.img}/>:<p>{item.text}</p>}</div>
-                        }
-                        
+                        return <div onClick={()=>{set_open_shop({item,index:data.findIndex((data_list)=>data_list._id==item._id)})}} className=" border-solid border-[1px] border-[#bfbfbf] flex justify-center items-center">{item.logo?<img className="h-full w-full object-cover" src={"https://"+item.logo}/>:<p>{item.name}</p>}</div>   
                     }
                 )
             }
     </section>
         )
-    }
 }
 
 export default Brands

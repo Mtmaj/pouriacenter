@@ -61,7 +61,7 @@ const Rent = (props)=>{
     }
     return (
         <div className="flex w-full flex-col gap-y-[15px]">
-            <div className="w-full flex bg-[#fcfcfc] drop-shadow-xl flex-col border-[0.5px] border-green rounded-[15px] p-[17px] gap-y-[30px]">
+            <div className="w-full flex flex-col border-[0.5px] border-[#989797] rounded-[15px] p-[17px] gap-y-[30px]">
                 <div className="w-full flex flex-row items-center justify-between">
                     <span className="font-bold text-[16px]">قیمت اجاره</span>
                 </div>
@@ -76,7 +76,7 @@ const Rent = (props)=>{
                     </div>
                 </div>
             </div>
-            <div className="w-full flex bg-[#fcfcfc] drop-shadow-xl flex-col border-[0.5px] border-green rounded-[15px] p-[17px] gap-y-[30px]">
+            <div className="w-full flex flex-col border-[0.5px] border-[#989797] rounded-[15px] p-[17px] gap-y-[30px]">
                 <div className="w-full flex flex-row items-center justify-between">
                     <span className="font-bold text-[16px]">قیمت رهن</span>
                 </div>
@@ -91,7 +91,7 @@ const Rent = (props)=>{
                     </div>
                 </div>
             </div>
-            <div className="w-full flex bg-[#fcfcfc] drop-shadow-xl flex-col border-[0.5px] border-green rounded-[15px] p-[17px] gap-y-[20px]">
+            <div className="w-full flex flex-col border-[0.5px] border-[#989797] rounded-[15px] p-[17px] gap-y-[20px]">
                 <div className="w-full flex flex-row items-center justify-between">
                     <span className="font-bold text-[16px]">متراژ</span>
                 </div>
@@ -104,7 +104,7 @@ const Rent = (props)=>{
                     </div>
                 </div>
             </div>
-            <div className="w-full flex bg-[#fcfcfc] drop-shadow-xl flex-col border-[0.5px] border-green rounded-[15px] p-[17px] gap-y-[10px]">
+            <div className="w-full flex flex-col border-[0.5px] border-[#989797] rounded-[15px] p-[17px] gap-y-[10px]">
                 <div className="w-full flex flex-row items-center justify-between">
                     <span className="font-bold text-[16px]">مرتب سازی بر اساس قیمت</span>
                 </div>
@@ -142,7 +142,7 @@ const Sell = (props)=>{
     }
     return (
         <div className="flex w-full flex-col gap-y-[15px]">
-            <div className="w-full flex bg-[#fcfcfc] drop-shadow-xl flex-col border-[0.5px] border-green rounded-[15px] p-[17px] gap-y-[30px]">
+            <div className="w-full flex flex-col border-[0.5px] border-[#989797] rounded-[15px] p-[17px] gap-y-[30px]">
                 <div className="w-full flex flex-row items-center justify-between">
                     <span className="font-bold text-[16px]">قیمت خرید</span>
                 </div>
@@ -157,7 +157,7 @@ const Sell = (props)=>{
                     </div>
                 </div>
             </div>
-            <div className="w-full flex bg-[#fcfcfc] drop-shadow-xl flex-col border-[0.5px] border-green rounded-[15px] p-[17px] gap-y-[20px]">
+            <div className="w-full flex flex-col border-[0.5px] border-[#989797] rounded-[15px] p-[17px] gap-y-[20px]">
                 <div className="w-full flex flex-row items-center justify-between">
                     <span className="font-bold text-[16px]">متراژ</span>
                 </div>
@@ -170,7 +170,7 @@ const Sell = (props)=>{
                     </div>
                 </div>
             </div>
-            <div className="w-full flex bg-[#fcfcfc] drop-shadow-xl flex-col border-[0.5px] border-green rounded-[15px] p-[17px] gap-y-[10px]">
+            <div className="w-full flex flex-col border-[0.5px] border-[#989797] rounded-[15px] p-[17px] gap-y-[10px]">
                 <div className="w-full flex flex-row items-center justify-between">
                     <span className="font-bold text-[16px]">مرتب سازی بر اساس قیمت</span>
                 </div>

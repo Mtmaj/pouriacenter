@@ -40,7 +40,7 @@ const Slider = (props)=>{
                         <Swiper  modules={[Autoplay]} className="w-full md:max-h-[400px] rounded md:min-h-[400px] h-[200px]" loop={true} autoplay={{ delay: 4000, disableOnInteraction: false }} dir="ltr" onSlideChange={(index)=>{SetPageIndex(index.realIndex)}} slidesPerView={1} onSwiper={(swiper)=>{swiperRef.current = swiper}}>
                             {props.slides.map((item)=>{
                                 return (<SwiperSlide className="text-center flex itmes-center justify-center w-full h-full">
-                                    <img className="object-cover min-w-full min-h-full" src={"http://"+item}/>
+                                    <img className="object-cover min-w-full min-h-full" src={"https://"+item}/>
                                 </SwiperSlide>)
                             })}
                             

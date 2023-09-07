@@ -12,10 +12,10 @@ const LinkItme = (props)=>{
 
 const Footer = ()=>{
     return (
-        <div className="w-full flex flex-col px-[100px] gap-y-[10px] h-fit mt-[40px]">
+        <div className="w-full flex flex-col md:px-[100px] px-[20px] gap-y-[10px] h-fit mt-[40px]">
             <div className="w-full bg-black h-[1px] rounded"></div>
-            <div className="w-full flex flex-row px-[10px] py-[10px] h-fit ">
-                <div className="w-[90%] border-l-[1px]  flex flex-col items-start px-[10px] gap-y-[20px]">
+            <div className="w-full flex lg:flex-row flex-col px-[10px] py-[10px] h-fit ">
+                <div className="w-[90%] lg:border-l-[1px]  flex flex-col items-start px-[10px] gap-y-[20px]">
                     <span className="font-bold">صفحات اصلی</span>
                     <div className="pr-[10px] flex flex-col gap-y-[10px]">
                         <LinkItme text={"واحد های تجاری"} />
@@ -25,7 +25,7 @@ const Footer = ()=>{
                         <LinkItme text={"خدمات"} />
                     </div>
                 </div>
-                <div className="w-[90%] border-l-[1px]  flex flex-col items-start px-[10px] gap-y-[20px]">
+                <div className="w-[90%] lg:border-l-[1px]  flex flex-col items-start px-[10px] gap-y-[20px]">
                     <span className="font-bold">راه های ارتباطی با ما</span>
                     <div className="pr-[10px] flex flex-col gap-y-[10px]">
                         <LinkItme text={"شماره تماس 1 : 09120001234"} />
