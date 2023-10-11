@@ -11,6 +11,14 @@ html,body{
   font-family: IranSans;
 }
 
+body{
+  background: linear-gradient(90deg, rgba(39, 126, 255, 0.15) 0%, rgba(255, 255, 255, 0.20) 20%, rgba(255, 255, 255, 0.20) 80%, rgba(0, 102, 255, 0.15) 100%), #FFF;
+}
+
+.header{
+  background: linear-gradient(90deg, rgba(39, 126, 255, 0.15) 0%, rgba(255, 255, 255, 0.20) 20%, rgba(255, 255, 255, 0.20) 80%, rgba(0, 102, 255, 0.15) 100%), #FFF;
+}
+
 @font-face {
   font-family: IranSans;
   src: url('/fonts/IRANYekanBlack.ttf');
@@ -56,7 +64,7 @@ html,body{
 
 .opacityanimstart{
   opacity: 1;
-  animation: opacityanim 1s 1;
+  animation: opacityanim 0.5s 1;
 }
 
 .widthanimstart{
@@ -95,4 +103,85 @@ input:checked{
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.custom-file-input {
+  color: transparent;
+}
+
+.custom-file-input::file-selector-button{
+  color: transparent;
+  opacity: 0;
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  
+  & .path {
+    stroke: #fd8312;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes imglogoloading {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.loadinganim{
+  animation: loadinganimkey 3.5s ease-in-out;
+  opacity: 0;
+  display: flex;
+  visibility: hidden;
+}
+
+@keyframes loadinganimkey{
+  0%{
+    visibility: visible;
+  }
+  1%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

@@ -3,15 +3,23 @@ import CartLogo from "@/public/icons/cart.svg";
 import BrandLogo from "@/public/icons/tag.svg";
 import GoldLogo from "@/public/icons/diamond.svg";
 import Image from "next/image";
+import Coffe from "@/public/images/coffe.jpeg"
+import brand from "@/public/images/brand.png"
+import tala from "@/public/images/tala.jpeg"
+import tejari from "@/public/images/tajari.jpg"
 import { useEffect } from "react";
 const MainPartItem = (props)=>{
     return (
-        <div className={`w-full group flex min-h-[250px] flex-col items-center border-[#bdbdbd] lg:border-l-[1px] lg:border-t-[1px] lg:border-b-[1px] lg:border-r-[0] border-[1px] ${props.border} `}>
-            <div className="h-full mainpartanim w-full flex flex-col items-center group-hover:opacity-[1] transition-all duration-500 opacity-[0]">
+        <div onClick={()=>{window.location.href=props.href}} className={`w-full group cursor-pointer flex min-h-[250px] flex-col items-center `}>
+            <div className="h-full relative mainpartanim w-full flex flex-col items-center justify-end transition-all duration-500 opacity-[0]">
                 <div className="h-full w-full flex items-center justify-center">
-                    <Image src={props.icon} alt={props.text} />
+                    <Image objectFit="cover" className="object-cover w-full h-full" src={props.icon} alt={props.text} />
                 </div>
-                <span className="w-full text-center py-[4px] group-hover:py-[7px] transition-all text-[15px] group-hover:text-[16px] group-hover:text-orange group-hover:bg-[#D9D9D9] font-bold">{props.text}</span>
+                <div className="absolute h-full w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.00)_0%,#000_100%);]"></div>
+                <div className="w-full absolute pb-[8px] group-hover:h-full h-[30px] flex items-center transition-all group-hover:bg-[rgba(0,0,0,0.6)] duration-500 bg-transparent">
+                    <span className="w-full text-white duration-500 text-center py-[4px] group-hover:py-[7px] transition-all text-[15px]">{props.text}</span>
+                </div>
+                
             </div>
         </div>
     )
@@ -32,7 +40,7 @@ const MainPart = ()=>{
                 var myItem = document.getElementsByClassName("mainpartanim")
                 for(var i = 0;i<myItem.length;i++){
                     myItem[i].classList.remove("opacity-[0]")
-                    myItem[i].classList.add("opacity-[0.4]")
+                    myItem[i].classList.add("opacity-[1]")
                     await new Promise(r => setTimeout(r, 400));
                 }
             }
@@ -44,11 +52,11 @@ const MainPart = ()=>{
     }
     return (
         <div className="container mx-auto md:px-[100px] px-[60px] py-[20px]">
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 opacity-[0] lg:gap-x-[0] lg:gap-y-[0] gap-[30px] w-full gridmainpart">
-                <MainPartItem text="کافی شاپ" icon={CoffeeLogo} />
-                <MainPartItem text="واحد های تجاری" icon={CartLogo}/>
-                <MainPartItem text="برند" icon={BrandLogo} />
-                <MainPartItem border={"lg:!border-l-0"} text={"بورس طلا"} icon={GoldLogo} />
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 opacity-[0] gap-[30px] w-full gridmainpart">
+                <MainPartItem text="کافی شاپ" icon={Coffe} href={"/shops?category=کافی شاپ"} />
+                <MainPartItem text="واحد های تجاری" icon={brand} href={"/shops"}/>
+                <MainPartItem text="برند" icon={tejari} href="/shops?is_brand=true"/>
+                <MainPartItem text={"بورس طلا"} icon={tala} href={"/shops?category=بورس طلا"} />
             </div>
         </div>
     )

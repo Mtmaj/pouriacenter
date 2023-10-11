@@ -64,7 +64,7 @@ const Shop = (props)=>{
                     <p className='text-white px-3 text-center shadow-3xl  rounded-2xl bg-orange'>{props.open_shop.item.category}</p>
                 </div>
                 <p>{props.open_shop.item.description}</p>
-                <small>آدرس :طبقه اول ، راهرو راست ، پلاک C6</small>
+                <small>{props.open_shop.item.address}</small>
                 <small className='flex gap-2 items-center'>
                     <p>شبکه های اجتماعی :</p>
                     <a className='hover:-translate-y-1 duration-300' href={props.open_shop.item.social_media}><Image width={18} src={instagram}/></a>

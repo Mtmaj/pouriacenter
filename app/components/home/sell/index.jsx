@@ -12,17 +12,16 @@ import { Autoplay, FreeMode, Mousewheel, Scrollbar,EffectCards } from 'swiper/mo
 import {IoIosArrowBack,IoIosArrowForward} from "react-icons/io"
 import Image from "next/image";
 import LogoImg from "@/public/images/logo.png";
-
-
+import { get_sell } from "@/app/utils/network/sell";
 
 export const SellItem = (props)=>{
     return (
         <div className="w-full flex flex-col rounded-[10px] border-[#989797] border-[1.5px] bg-white ">
-            <div className="relative flex items-start justify-end h-[300px] w-full">
+            <div className="relative flex items-start justify-end h-[200px] w-full">
                 <div className="absolute">
                     <Image src={LogoImg} alt="پوریا سنتر" />
                 </div>
-                <img src={"https://"+props.item.images[0]} className="rounded-t-[10px] h-[300px] w-full shadow object-cover" />
+                <img src={"https://"+props.item.images[0]} className="rounded-t-[10px] h-[200px] w-full shadow object-cover" />
             </div>
             
             <div className="w-full h-full px-[13px] py-[10px] flex flex-col gap-y-[10px] items-center">
@@ -63,61 +62,45 @@ export const SellItem = (props)=>{
         </div>
     )
 }
+import {useCallback} from "react";
 
 const Sell = ()=>{
-    useEffect(()=>{
-        opacityanim(1000,"widthanimstart",[])
-    })
-    async function opacityanim(delay){
-        const observer = new IntersectionObserver(entries => {
-        // Loop over the entries
-            entries.forEach(async entry => {
-            // If the element is visible
-            if (entry.isIntersecting) {
-                // Add the animation class
-                entry.target.classList.add("opacityanimstart");
-                var myItem = document.getElementsByClassName("mainpartanim")
-                for(var i = 0;i<myItem.length;i++){
-                    myItem[i].classList.remove("opacity-[0]")
-                    myItem[i].classList.add("opacity-[0.4]")
-                    await new Promise(r => setTimeout(r, 400));
-                }
-            }
-            });
-        });
-        await new Promise(r => setTimeout(r, delay));
-        observer.observe(document.querySelector(".selllist"))
-        
+    const [data,set_data] = useState(null)
+    if(data == null){
+        get_sell({}).then((data_get)=>{
+            set_data([...data_get.slice(0,3)])
+        })
     }
     return (
-        <div className="w-full mx-auto w-full md:px-[80px] opacity-[0] selllist px-[0px] flex gap-y-[40px] pb-[40px] lg:flex-row flex-col items-center gap-x-[20px] mb-[30px]">
-            {/* <div className="lg:grid grid-cols-3 gap-x-[20px] hidden">
-                <SellItem />
-                <SellItem />
-                <SellItem />
-            </div> */}
-            {/* <div className="w-full lg:hidden overflow-hidden pb-[30px]">
+      <div className="container md:px-[100px] px-[20px] mx-auto flex gap-y-[40px] lg:flex-row flex-col justify-between items-center">
+        <div className="flex flex-col items-start md:w-[400px] w-full px-[20px] md:px-[0px] gap-y-[25px]">
+            <div className="w-fit items-start flex-col flex gap-y-[5px]">
+                <span className="flex flex-row items-center gap-x-[5px] text-bold md:text-[18px] font-bold text-[15px] whitespace-nowrap">تازه های فروش و اجاره</span>
+                <div className="w-[150%] flex flex-col items-start gap-y-[4px]">
+                    <div className="w-full bg-green h-[2px] rounded"></div>
+                    <div className="w-[60%] bg-green opacity-[0.5] rounded h-[2px]"></div>
+                </div>
+            </div>
+            <p>برای بررسی موارد بیشتر و خرید ، اجاره و رهن در مرکز خرید پوریا از بخش واحد های فروش و اجاره دیدن کنید</p>
+            <Link href={"/sellandrent"} className="text-white bg-orange px-[20px] py-[5px] rounded text-[14px]">مشاهده موارد بیشتر ...</Link>
+        </div>
+        <div className="md:w-[400px] w-full overflow-hidden pb-[30px]">
                 <Swiper
-                    className="w-[70%] md:w-[50%] lg:hidden"
+                    className="md:w-[70%] w-[90%]"
                     effect={"cards"}
                     grabCursor={true}
                     modules={[EffectCards]}
                 >
-                    <SwiperSlide className="drop-shadow-xl rounded-[10px]">
-                        <SellItem />
-                    </SwiperSlide>
-                    <SwiperSlide className="drop-shadow-xl rounded-[10px]">
-                        <SellItem />
-                    </SwiperSlide>
-                    <SwiperSlide className="drop-shadow-xl rounded-[10px]">
-                        <SellItem />
-                    </SwiperSlide>
+                    {data==null?<></>:data.map((item)=>{
+                        return <SwiperSlide className="drop-shadow-xl rounded-[10px]">
+                            <SellItem item={item} />
+                        </SwiperSlide>
+                    })}
+                    
                 </Swiper>
-            </div> */}
-            <Link href={"/"} className="bg-white drop-shadow-[0px_3px_10px_rgba(0,0,0,0.14)] px-[10px] whitespace-nowrap py-[5px] rounded-[5px] hover:mb-[10px] transition-all">مشاهده همه</Link>
-            
-        </div>
-    )
+            </div>
+      </div>  
+    );
 }
 
 export default Sell

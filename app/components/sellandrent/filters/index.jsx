@@ -226,30 +226,30 @@ const RentFilterPanel = (props)=>{
             </div>
             <div className="grid grid-cols-2 w-full mt-[10px]">
                 <div className="flex flex-wrap gap-x-[5px] gap-y-[5px]"> 
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>10000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>15000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>20000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>25000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>30000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>40000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>50000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>100000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>200000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>500000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>1000000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>10000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>15000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>20000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>25000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>30000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>40000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>50000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>100000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>200000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>500000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_start(e.currentTarget.innerHTML)}}>1000000000</span>
                 </div>
                 <div className="flex flex-wrap gap-x-[5px] gap-y-[5px]">
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>10000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>15000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>20000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>25000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>30000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>40000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>50000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>100000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>200000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>500000000</span>
-                    <span className="border text-[14px] px-[10px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>1000000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>10000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>15000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>20000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>25000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>30000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>40000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>50000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>100000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>200000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>500000000</span>
+                    <span className="border text-[10px] px-[5px] rounded" onClick={(e)=>{set_end(e.currentTarget.innerHTML)}}>1000000000</span>
                 </div>
             </div>
             <div className="w-full mt-[20px] grid grid-cols-2 gap-x-[5px]">

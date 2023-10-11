@@ -15,7 +15,7 @@ const Line = ()=>{
 const HeaderItem = (props)=>{
     return (
         <div className={"relative text-[13px] group hover:text-orange font-semibold transition-all duration-500"}>
-            <Link href={props.link} >{props.text}</Link>
+            <a href={props.link}>{props.text}</a>
             <div className="absolute h-[2px] w-0 group-hover:bg-orange group-hover:w-full lg:mt-[4px] mt-[2px] bg-black transition-all duration-500 rounded-full"></div>
         </div>
     );
@@ -73,13 +73,13 @@ const Header = ()=>{
                         <HeaderItem text={"برند ها"} link={"/shops?is_brand=true"} />
                         <HeaderItem text={"واحد فروش و اجاره"}  link={"/sellandrent"}/>
                     </div>
-                    <div className="flex flex-col items-center scale-[0.8]">
-                        <Image src={LogoImg} alt={"Logo"} className={" md:mr-[0] mr-[-20px] object-contain "+(show_line == "opacity-[0]"?"md:min-w-[100px] min-w-[80px]":"md:min-w-[90px] min-w-[80px]")} />
-                        <div className={"md:flex flex-col text-[13px] items-center mt-[-15px] hidden font-extrabold "+(show_line == "opacity-[0]"?"md:flex":"md:hidden")}>
+                    <Link href={"/"} className="flex flex-col items-center scale-[0.8]">
+                        <Image src={LogoImg} alt={"Logo"} className={" md:mr-[0] mr-[-20px] object-contain "+(show_line == "opacity-[0]"?"md:min-w-[100px] min-w-[90px]":"md:min-w-[90px] min-w-[90px]")} />
+                        <div className={"md:flex flex-col text-[15px] items-center mt-[-15px] hidden font-extrabold "+(show_line == "opacity-[0]"?"md:flex":"md:hidden")}>
                             <span className="text-orange">POURIA</span>
                             <span className="mt-[-4px]">CENTER</span>
                         </div>
-                    </div>
+                    </Link>
                     <div className="w-full flex justify-between hidden lg:flex">
                         <HeaderItem text={"اخبار"} link={"/news"} />
                         <HeaderItem text={"خدمات"} link={"/services"} />

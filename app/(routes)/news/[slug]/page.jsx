@@ -6,7 +6,7 @@ import Image from "next/image"
 import MainNewsPage from "@/app/components/newspage/index"
 import { get_by_code } from "@/app/utils/network/news"
 import { useEffect, useState } from "react"
-
+import Footer from "@/app/components/footer"
 const News = ()=>{
     const [data,set_data] = useState(null)
     useEffect(()=>{
@@ -26,6 +26,7 @@ const News = ()=>{
                 <PageTitle items={["اخبار",data.title]} />
             </div>
             <MainNewsPage data={data} />
+            <Footer />
         </>}
         </>
     )

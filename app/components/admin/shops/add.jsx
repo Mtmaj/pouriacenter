@@ -50,7 +50,7 @@ const ShopAddAdmin = (props)=>{
         <div className="w-full flex flex-col items-start gap-y-[20px] overflow-y-scroll p-[30px]">
             <span className="text-[20px]">افزودن واحد تجاری یا برند</span>
             <input value={name} onChange={(e)=>{set_name(e.currentTarget.value)}} className="bg-[rgba(0,0,0,0.1)] rounded p-[5px] md:w-[300px] w-full" placeholder="نام واحد..." />
-            {logo == null?<></>:<img onClick={()=>{set_logo(null)}} className="min-w-[50px] w-[50px] min-h-[50px] h-[50px] object-cover" src={"http://" + logo} />}
+            {logo == null?<></>:<img onClick={()=>{set_logo(null)}} className="min-w-[50px] w-[50px] min-h-[50px] h-[50px] object-cover" src={"https://" + logo} />}
             <span>دکمه افزودن لوگو :</span>
             <input type="file" onChange={handleChangeLogo} className="bg-orange text-white rounded px-[15px] py-[5px] min-h-[40px]" placeholder="افزودن لوگو" />
             <input value={category} onChange={(e)=>{set_category(e.currentTarget.value)}} className="bg-[rgba(0,0,0,0.1)] rounded p-[5px] md:w-[300px] w-full" placeholder="دسته بندی..." />

@@ -10,10 +10,11 @@ import RentAddAdmin from "./rent/add"
 import MessageMainAdmin from "./messages/index"
 import NewsMainAdmin from "./news/index"
 import NewsAddAdmin from "./news/add"
+import MessageCvAdmin from "./messages_cv/index"
 import { useState } from "react"
 
 const AdminMain = ()=>{
-    const list_page = [AboutUsAdmin,ContactUsAdmin,ShopsMainAdmin,ShopsAddAdmin,SellMainAdmin,SellAddAdmin,RentMainAdmin,RentAddAdmin,MessageMainAdmin,NewsMainAdmin,NewsAddAdmin]
+    const list_page = [AboutUsAdmin,ContactUsAdmin,ShopsMainAdmin,ShopsAddAdmin,SellMainAdmin,SellAddAdmin,RentMainAdmin,RentAddAdmin,MessageMainAdmin,NewsMainAdmin,NewsAddAdmin,MessageCvAdmin]
     const [data_set,set_data_set] = useState(null)
     const [select_page,set_select_page] = useState(0)
     function PageHandle(props){
@@ -36,6 +37,7 @@ const AdminMain = ()=>{
                     <span className="border-b-[1px] w-fit" onClick={()=>{set_select_page(6)}}>واحد های رهن و اجاره</span>
                     <span className="border-b-[1px] w-fit" onClick={()=>{set_select_page(8)}}>پیغام ها</span>
                     <span className="border-b-[1px] w-fit" onClick={()=>{set_select_page(9)}}>اخبار</span>
+                    <span className="border-b-[1px] w-fit" onClick={()=>{set_select_page(11)}}>همکاری با ما</span>
                     <span className="border-b-[1px] w-fit" onClick={()=>{set_select_page(0)}}>بستن</span>
                 </div>
             </div>

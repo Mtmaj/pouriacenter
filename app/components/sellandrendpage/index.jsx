@@ -45,7 +45,7 @@ const MainSellAndRentPage = (props)=>{
                 </div>:<div className="flex flex-col items-start gap-y-[10px] mt-[20px]">
                     <span className="font-bold text-[18px] flex md:justify-start gap-x-[10px] justify-between w-full">قیمت فروش : <span className="text-green">{props.data.price} تومن</span></span>
                 </div>}
-                <span className="font-extrabold text-[15px] flex items-center gap-x-[15px] flex md:justify-start gap-x-[10px] justify-between w-full">جهت اطلاعات بیشتر تماس بگیرید : <span className="bg-orange text-white rounded text-[15px] px-[10px] py-[2px] pt-[5px]">0912xxx1234</span></span>
+                <span className="font-extrabold text-[12px] flex items-center gap-x-[15px] flex md:justify-start gap-x-[10px] justify-between w-full">جهت اطلاعات بیشتر تماس بگیرید : <span className="bg-orange text-white rounded text-[15px] px-[10px] py-[2px] pt-[5px]">0912xxx1234</span></span>
                 <div className="w-full border lg:hidden  border-[#A7A7A7] gap-y-[10px] rounded px-[20px] pb-[20px] py-[10px] flex flex-col items-start">
                     <span className="font-bold text-[18px]">تگ ها</span>
                     <div className="flex flex-wrap gap-x-[8px] gap-y-[14px] w-full">

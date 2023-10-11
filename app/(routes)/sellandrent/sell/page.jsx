@@ -59,9 +59,9 @@ const SellRentPage = ()=>{
                 <PageTitle items={["واحد فروش و اجاره",data.name]} />
                 <div className="h-[30px]"></div>
                 <MainSellAndRentPage data={data} />      
-                <Title text={"آگهی های مشابه"} idname={useid_.replaceAll(":","")} />
                 <Sell />
             </>}
+            <Footer />
         </>
         
     );

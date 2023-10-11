@@ -45,3 +45,12 @@ export async function delete_shop(shop_id){
         return e.request
     }
 }
+
+export async function get_category(){
+    try{
+        const data = await axios.get(config.url+"shops/get-categorys")
+        return data
+    }catch(e){
+        return e.request
+    }
+}

@@ -54,14 +54,14 @@ const MainContactUs = ()=>{
                 <div className="w-full flex flex-col gap-y-[15px]">
                     <div className="flex md:flex-row flex-col gap-y-[10px] md:items-center items-start gap-x-[10px]">
                         <span className="text-green whitespace-nowrap font-semibold">نام و نام خانوادگی : </span>
-                        <input onChange={(e)=>{set_full_name(e.currentTarget.value)}} value={full_name} type="text" placeholder="نام و نام خانوادگی خود را وارد کنید ..." className="w-full focus:border-green border border-[rgba(0,0,0,0)] transition-all !outline-none bg-[rgba(0,0,0,0.1)] px-[15px] rounded py-[10px]"></input>
+                        <input onChange={(e)=>{set_full_name(e.currentTarget.value)}} value={full_name} type="text" placeholder="نام و نام خانوادگی خود را وارد کنید ..." className="w-full focus-within:border-green border border-[rgba(0,0,0,0)] transition-all !outline-none bg-[rgba(0,0,0,0.1)] px-[15px] rounded py-[10px]"></input>
                     </div>
                     <div className="flex md:flex-row flex-col gap-y-[10px] md:items-center items-start gap-x-[10px]">
-                        <span className="text-green whitespace-nowrap font-semibold min-w-[125.25px] text-start">تلفن همراه : </span>
+                        <span className="text-green whitespace-nowrap font-semibold min-w-[131px] text-start">تلفن همراه : </span>
                         <input onChange={(e)=>{set_phone_number(e.currentTarget.value)}} value={phone_number} type="text" placeholder="تلفن خود را وارد کنید ..." className="w-full !outline-none focus:border-green border border-[rgba(0,0,0,0)] transition-all bg-[rgba(0,0,0,0.1)] px-[15px] rounded py-[10px]"></input>
                     </div>
                     <div className="flex md:flex-row flex-col gap-y-[10px] md:items-center items-start gap-x-[10px]">
-                        <span className="text-green whitespace-nowrap font-semibold min-w-[125.25px] text-start">ایمیل : </span>
+                        <span className="text-green whitespace-nowrap font-semibold min-w-[131px] text-start">ایمیل : </span>
                         <input onChange={(e)=>{set_email(e.currentTarget.value)}} value={email} type="text" placeholder="ایمیل خود را وارد کنید ..." className="w-full !outline-none focus:border-green border border-[rgba(0,0,0,0)] transition-all bg-[rgba(0,0,0,0.1)] px-[15px] rounded py-[10px]"></input>
                     </div>
                 </div>
